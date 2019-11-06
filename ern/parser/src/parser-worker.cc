@@ -22,7 +22,7 @@ static std::map<char,int> T {
 int parseDuration(const char* in)
 {
   std::map<char,int> m = P;
-  std::string b;
+  std::string b ("0");
   std::string str (in);
   int v = 0;
   int *y;
@@ -31,6 +31,7 @@ int parseDuration(const char* in)
     if (u < 0) {
       if (*rit == 'T') m = T;
     } else if (u > 0) {
+      // NOTE: this should not be needed, fix the bug instead
       v += std::stol(b) * (*y);
       b = "";
       y = &u;

@@ -19,16 +19,19 @@ class ParserStream extends Transform {
         this.emit('error', err)
         return
       }
-      // COPY WAY | is fake quote char to trick psql COPY method, \n is row delimeter
+      
        if (this._mode === 0)
-         this.push(json)
+        //  this.push(json)
+        this.push(`${json}\n`)
        else if (this._mode === 1)
          this.push({
            ...JSON.parse(json),
            Hash: crypto.createHash('md5').update(json).digest('hex')
          })
        else
+         // COPY WAY | is fake quote char to trick psql COPY method, \n is row delimeter
          this.push(`|${json}|\n`)
+
        if (this._ended) {
          this._finish()
        }

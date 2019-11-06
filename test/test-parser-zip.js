@@ -4,8 +4,8 @@ const {PassThrough} = require('stream');
 const assert = require('assert');
 const { createReadStream } = require('../io')
 
-const rs = createReadStream(`file://${__dirname}/fixtures/set-2019-2-F-20190916.zip`);
-const ws = new PassThrough; //process.stdout;
+const rs = createReadStream(`file://${__dirname}/fixtures/set-2019-W-20190709.zip`);
+const ws = createFileStream(__dirname + '/fixtures/set-2019-W-20190709.ndjson');
 const parser = new Parser();
 
 parser.on('pipe', () => {

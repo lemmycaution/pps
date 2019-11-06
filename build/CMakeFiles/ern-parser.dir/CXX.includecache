@@ -198,6 +198,20 @@ stddef.h
 stdint.h
 -
 
+/Users/onuruyar/Code/pps/ern/parser/src/parser-worker.cc
+parser-worker.h
+/Users/onuruyar/Code/pps/ern/parser/src/parser-worker.h
+parser.h
+/Users/onuruyar/Code/pps/ern/parser/src/parser.h
+schema.h
+/Users/onuruyar/Code/pps/ern/parser/src/schema.h
+iostream
+-
+string
+-
+map
+-
+
 /Users/onuruyar/Code/pps/ern/parser/src/parser-worker.h
 napi.h
 -
@@ -207,14 +221,6 @@ rapidjson/writer.h
 /Users/onuruyar/Code/pps/ern/parser/src/rapidjson/writer.h
 rapidjson/stringbuffer.h
 /Users/onuruyar/Code/pps/ern/parser/src/rapidjson/stringbuffer.h
-
-/Users/onuruyar/Code/pps/ern/parser/src/parser.cc
-parser.h
-/Users/onuruyar/Code/pps/ern/parser/src/parser.h
-parser-worker.h
-/Users/onuruyar/Code/pps/ern/parser/src/parser-worker.h
-iostream
--
 
 /Users/onuruyar/Code/pps/ern/parser/src/parser.h
 napi.h
